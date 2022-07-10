@@ -52,7 +52,7 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.MathRoda'
-                artifactId = 'plutu-api-kotlin-client'
+                artifactId = '$HOME/.m2/repository/com/github/MathRoda/plutu-api-kotlin-client/1.0.0'
                 version = '1.0.0'
             }
         }
