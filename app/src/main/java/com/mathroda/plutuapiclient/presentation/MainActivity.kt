@@ -15,13 +15,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-        viewModel.sendOtp.observe(this) { result ->
+        /*viewModel.sendOtp.observe(this) { result ->
           when(result) {
               is Resource.Success -> Log.d("result", result.data.toString())
               is Resource.Error -> Log.d("result", result.message.toString())
               is Resource.Loading -> Log.d("result", result.data.toString())
           }
-        }
+        }*/
 
     }
 }

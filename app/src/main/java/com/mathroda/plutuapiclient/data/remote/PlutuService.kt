@@ -10,8 +10,8 @@ private val retrofitBuilder =  Retrofit.Builder()
     .build()
 
 
-object InstancePlutuService {
+/*object InstancePlutuService {
     val plutuService: com.mathroda.plutuApiClient.PlutuApi by lazy {
         retrofitBuilder.create(com.mathroda.plutuApiClient.PlutuApi::class.java)
     }
-}
+}*/
