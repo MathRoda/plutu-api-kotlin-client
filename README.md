@@ -24,7 +24,7 @@ allprojects {
 3. Add the dependency
 ```gradle
 dependencies {
-	        implementation 'com.github.MathRoda:plutu-api-kotlin-client:Tag'
+	        implementation 'com.github.MathRoda:plutu-api-kotlin-client:$latest_version'
 	}
 ```
 4. Create a new account to get your API keys [Plutu](https://my.plutus.ly/register/)
