@@ -1,27 +1,30 @@
 package com.mathroda.plutuapiclient.presentation
 
-import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
+import android.os.Build.VERSION_CODES.S
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.mathroda.plutuapiclient.R
-import com.mathroda.plutuapiclient.core.Resource
-import com.mathroda.plutuapiclient.presentation.viewmodel.PlutuViewModel
+import com.mathroda.plutuapiclient.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private val viewModel: PlutuViewModel by viewModels()
+    private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        
-        /*viewModel.sendOtp.observe(this) { result ->
-          when(result) {
-              is Resource.Success -> Log.d("result", result.data.toString())
-              is Resource.Error -> Log.d("result", result.message.toString())
-              is Resource.Loading -> Log.d("result", result.data.toString())
-          }
-        }*/
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
+        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment)as NavHostFragment
+        navController = navHost.navController
+        navController.setGraph(R.navigation.nav_graph)
+        setupActionBarWithNavController(navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

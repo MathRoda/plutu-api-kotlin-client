@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">plutu-api-kotlin-client</string>
+    <string name="plutu_payment_test">Plutu Payment Test</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sadad">Sadad</string>
+    <string name="ad_fali">Ad-Fali</string>
+    <string name="local_banks_cards">Local Banks Cards</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sadad_payments_gateway">Sadad Payments Gateway</string>
+    <string name="hint">* in test mode use this number: 0913632323</string>
+    <string name="year_of_birth">Year of Birth</string>
+    <string name="amount_in_libyan_dinars">Amount in Libyan Dinars</string>
+    <string name="proceed_payment">Proceed payment</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="confirm_payment">Confirm Payment</string>
+    <string name="enter_otp_code">Enter OTP Code</string>
 </resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mathroda.plutuapiclient.presentation.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_adfaliVerifyFragment"
+            app:destination="@id/adfaliVerifyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sadadVerifyFragment"
+            app:destination="@id/sadadVerifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adfaliVerifyFragment"
+        android:name="com.mathroda.plutuapiclient.presentation.ui.adfali.AdfaliVerifyFragment"
+        android:label="Verify"
+        tools:layout="@layout/fragment_adfali_verify" >
+        <action
+            android:id="@+id/action_adfaliVerifyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_adfaliVerifyFragment_to_adfaliConfirmFragment"
+            app:destination="@id/adfaliConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sadadVerifyFragment"
+        android:name="com.mathroda.plutuapiclient.presentation.ui.sadad.SadadVerifyFragment"
+        android:label="Verify"
+        tools:layout="@layout/fragment_sadad_verify" >
+        <action
+            android:id="@+id/action_sadadVerifyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_sadadVerifyFragment_to_sadadConfirmFragment2"
+            app:destination="@id/sadadConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adfaliConfirmFragment"
+        android:name="com.mathroda.plutuapiclient.presentation.ui.adfali.AdfaliConfirmFragment"
+        android:label="Confirm"
+        tools:layout="@layout/fragment_adfali_confirm" >
+        <argument
+            android:name="processId"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_adfaliConfirmFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sadadConfirmFragment"
+        android:name="com.mathroda.plutuapiclient.presentation.ui.sadad.SadadConfirmFragment"
+        android:label="Confirm"
+        tools:layout="@layout/fragment_sadad_confirm" >
+        <argument
+            android:name="processId"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sadadConfirmFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
